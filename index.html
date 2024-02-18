@@ -18,12 +18,15 @@
 <script>
 let counter = 0;
 let bomba = document.querySelector('.bomba')
-console.log(bomba)
-setInterval(move,500);
+let timer = setInterval(move, 30);
 
 function move() {
     bomba.style.top = counter * 10 + 'px'
     counter++;
+    if (counter > 50) {
+        clearInterval(timer)
+    }
+
 }
 
 </script>
