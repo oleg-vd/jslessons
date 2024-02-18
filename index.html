@@ -1,11 +1,29 @@
 <style>
-
+.bomba {
+    position: relative;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: orangered;
+    border-radius: 15px;
+}
 </style>
 
 <body>
-    
+<div>
+<div class="bomba"></div>    
+</div>    
 </body>
 
 <script>
+let counter = 0;
+let bomba = document.querySelector('.bomba')
+console.log(bomba)
+setInterval(move,500);
+
+function move() {
+    bomba.style.top = counter * 10 + 'px'
+    counter++;
+}
 
 </script>
